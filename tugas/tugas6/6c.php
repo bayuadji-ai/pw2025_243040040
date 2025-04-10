@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    if ($username === "admin" && $password === "adm") {
+    if ($username === "Hery" && $password === "123") {
         $_SESSION['loggedin'] = true;
-        header("Location: 6d.php");
+
         exit();
     } else {
         $error = "Username / Password salah!";
@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         body {
             display: flex;
             justify-content: center;
-            align-content: center;
+            
+            align-items: center;
 
 
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -35,10 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .login-container {
+            
             background-color: #DEB887;
             padding: 20px;
             text-align: center;
             width: 300px;
+            border-radius: 20px;
 
         }
 
@@ -55,23 +58,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         button {
-            background-color: #FFF8DC;
+            background-color: #2F4F4F;
             color: black;
             border: none;
             padding: 10px;
             width: 100%;
             cursor: pointer;
+            border-radius: 20px;
         }
 
         button:hover {
-            background-color: rgb(84, 108, 145);
+            background-color: #B8860B;
         }
     </style>
 </head>
 
 <body>
     <div class="login-container">
-        <h2>Login Admin</h2>
+        <h2>Masuk</h2>
         <p class="error"><?php echo $error; ?></p>
         <?php if ($error): ?>
         <?php endif; ?>
